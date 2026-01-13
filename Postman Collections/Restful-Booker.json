@@ -13,12 +13,24 @@
 					"script": {
 						"id": "57ba78e8-08a2-45d2-9a5c-e877dadf5997",
 						"exec": [
+							"const jsonResponse = pm.response.json();\r",
+							"\r",
 							"pm.test(\"Verify status code is 200\", function () \r",
 							"{\r",
 							"    pm.response.to.have.status(200);\r",
-							"}\r",
+							"})\r",
 							"\r",
-							"pm.collectionVariables.set(\"token\", pm.response.json().token);"
+							"pm.test(\"Verify token is present\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse).have.property(\"token\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify token is not empty\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.token).to.not.be.empty;\r",
+							"})\r",
+							"\r",
+							"pm.collectionVariables.set(\"token\", jsonResponse.token);"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -44,7 +56,74 @@
 				},
 				"url": "{{url}}auth"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "8c5e7303-1949-487d-b56c-18459398ccf6",
+					"name": "ExampleResponse",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}auth"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jan 2026 22:57:59 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1b-cs6HcOtxhSE1UvCTPtt4Q6Ie584\""
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=ZJ6fDq8pFMzA%2Fi3BpDd%2Fz%2B8w3CBo16IJDBmuJXWiV1s%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1768345079\"}],\"max_age\":3600}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=\"https://nel.heroku.com/reports?s=ZJ6fDq8pFMzA%2Fi3BpDd%2Fz%2B8w3CBo16IJDBmuJXWiV1s%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1768345079\""
+						},
+						{
+							"key": "Server",
+							"value": "Heroku"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 heroku-router"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"token\": \"4fabc7630d15f15\"\n}"
+				}
+			]
 		}
 	],
 	"event": [
