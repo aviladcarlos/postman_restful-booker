@@ -23,7 +23,7 @@
 						}
 					}
 				},
-				"url": "https://restful-booker.herokuapp.com/auth"
+				"url": "{{url}}auth"
 			},
 			"response": []
 		}
@@ -32,7 +32,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e065399b-dde4-4a57-b434-4bccb300ddce",
+				"id": "57bd2042-2122-4892-b7ae-6c7db56ac514",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -44,7 +44,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6b740dcd-b4f3-4028-a202-be4be10bd357",
+				"id": "b6bd5903-ae02-4b72-80b6-10f28da74d82",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -62,6 +62,10 @@
 		{
 			"key": "password",
 			"value": "password123"
+		},
+		{
+			"key": "url",
+			"value": "https://restful-booker.herokuapp.com/"
 		}
 	]
 }
