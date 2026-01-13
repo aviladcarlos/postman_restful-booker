@@ -7,6 +7,25 @@
 	"item": [
 		{
 			"name": "CreateToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "57ba78e8-08a2-45d2-9a5c-e877dadf5997",
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"token\", pm.response.json().token);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "158faf94-7a55-4261-8d61-81a1f2493881",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
