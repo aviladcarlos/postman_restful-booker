@@ -228,8 +228,18 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Billy\",\r\n    \"lastname\": \"Yellow\",\r\n    \"totalprice\": 566,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": \r\n    {\r\n        \"checkin\": \"2024-01-01\",\r\n        \"checkout\": \"2025-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/booking"
 			},
 			"response": [
 				{
@@ -304,11 +314,20 @@
 			"name": "GetBooking",
 			"id": "2f6e74e5-5a8d-4193-8d42-958b358b0da0",
 			"protocolProfileBehavior": {
-				"disableBodyPruning": true
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/booking/4465"
 			},
 			"response": []
 		}
