@@ -299,6 +299,18 @@
 					"body": "{\n    \"bookingid\": 1406,\n    \"booking\": {\n        \"firstname\": \"Billy\",\n        \"lastname\": \"Yellow\",\n        \"totalprice\": 566,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2024-01-01\",\n            \"checkout\": \"2025-01-01\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}"
 				}
 			]
+		},
+		{
+			"name": "GetBooking",
+			"id": "2f6e74e5-5a8d-4193-8d42-958b358b0da0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
