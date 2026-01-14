@@ -315,7 +315,9 @@
 			"id": "2f6e74e5-5a8d-4193-8d42-958b358b0da0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
-				"disabledSystemHeaders": {}
+				"disabledSystemHeaders": {
+					"accept": true
+				}
 			},
 			"request": {
 				"method": "GET",
@@ -323,11 +325,26 @@
 					{
 						"key": "Accept",
 						"value": "application/json",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					}
 				],
-				"url": "{{url}}/booking/4465"
+				"url": {
+					"raw": "{{url}}/booking/1320",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"1320"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "23",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		}
