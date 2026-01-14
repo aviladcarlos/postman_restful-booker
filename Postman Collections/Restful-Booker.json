@@ -7,13 +7,35 @@
 	"item": [
 		{
 			"name": "HealthCheck",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc2afb-1b7b-4d10-b296-8f78a4bf0286",
+						"exec": [
+							"pm.test(\"Verify api is running\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "ab03629c-fad2-44dc-a81a-740ccf82811c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{url}}/ping"
 			},
 			"response": []
 		},
