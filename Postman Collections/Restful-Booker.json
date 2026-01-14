@@ -231,7 +231,74 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"id": "5f03401d-c1f0-4791-adaf-dab9f6fbdc88",
+					"name": "ExampleResponse",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Billy\",\r\n    \"lastname\": \"Yellow\",\r\n    \"totalprice\": 566,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": \r\n    {\r\n        \"checkin\": \"2024-01-01\",\r\n        \"checkout\": \"2025-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/booking"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Jan 2026 22:23:45 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"c8-elmybx3TNKH/ZQChpu3njSX2SJ4\""
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=rg0OFQqLXjDW9geTeujC1kX0q4aW%2B5sXTYUahzQkrDM%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1768429425\"}],\"max_age\":3600}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=\"https://nel.heroku.com/reports?s=rg0OFQqLXjDW9geTeujC1kX0q4aW%2B5sXTYUahzQkrDM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1768429425\""
+						},
+						{
+							"key": "Server",
+							"value": "Heroku"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 heroku-router"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"bookingid\": 1406,\n    \"booking\": {\n        \"firstname\": \"Billy\",\n        \"lastname\": \"Yellow\",\n        \"totalprice\": 566,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2024-01-01\",\n            \"checkout\": \"2025-01-01\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}"
+				}
+			]
 		}
 	],
 	"event": [
