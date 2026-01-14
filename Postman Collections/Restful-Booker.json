@@ -353,7 +353,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "d0705d02-e3e3-482e-91bf-e3a6cbac76d2",
+				"id": "16ed0b87-0c24-43ad-94de-02ab7d479f34",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -365,7 +365,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "0a01a92c-c59a-4201-8b00-efe5ed7923c2",
+				"id": "b3087cd1-fe40-4722-9536-f0f4279f8b61",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -391,6 +391,35 @@
 		{
 			"key": "token",
 			"value": ""
+		},
+		{
+			"key": "firstname",
+			"value": ""
+		},
+		{
+			"key": "lastname",
+			"value": ""
+		},
+		{
+			"key": "totalprice",
+			"value": ""
+		},
+		{
+			"key": "depositpaid",
+			"value": ""
+		},
+		{
+			"key": "checkin",
+			"value": ""
+		},
+		{
+			"key": "checkout",
+			"value": ""
+		},
+		{
+			"key": "additionalneeds",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
