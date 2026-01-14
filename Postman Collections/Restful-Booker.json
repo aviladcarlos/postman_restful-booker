@@ -6,6 +6,18 @@
 	},
 	"item": [
 		{
+			"name": "HealthCheck",
+			"id": "ab03629c-fad2-44dc-a81a-740ccf82811c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
 			"name": "CreateToken",
 			"event": [
 				{
@@ -54,7 +66,7 @@
 						}
 					}
 				},
-				"url": "{{url}}auth"
+				"url": "{{url}}/auth"
 			},
 			"response": [
 				{
@@ -130,7 +142,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "bc671cff-02e5-4c86-8931-946bd6fa60ce",
+				"id": "d0705d02-e3e3-482e-91bf-e3a6cbac76d2",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -142,7 +154,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ffd6c332-7d59-40b6-ac3c-7f95b8bc3680",
+				"id": "0a01a92c-c59a-4201-8b00-efe5ed7923c2",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -167,8 +179,7 @@
 		},
 		{
 			"key": "token",
-			"value": "",
-			"type": "default"
+			"value": ""
 		}
 	]
 }
