@@ -256,10 +256,12 @@
 							"          \"type\": \"object\",\r",
 							"          \"properties\": {\r",
 							"            \"checkin\": {\r",
-							"              \"type\": \"string\"\r",
+							"              \"type\": \"string\",\r",
+							"              \"format\": \"date\"\r",
 							"            },\r",
 							"            \"checkout\": {\r",
-							"              \"type\": \"string\"\r",
+							"              \"type\": \"string\",\r",
+							"              \"format\": \"date\"\r",
 							"            }\r",
 							"          },\r",
 							"          \"required\": [\r",
@@ -433,7 +435,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1cdc1621-71be-4c1c-9dc5-6d29cfb96722",
+				"id": "376b81cd-1e9e-4748-b0ad-ac6d1d52721d",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -445,7 +447,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "366f847c-23da-4e2a-9fbc-e6b5cc54a238",
+				"id": "9cab2588-ea7a-44a7-bcd3-f16c0869ea2d",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
