@@ -232,7 +232,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"Billy\",\r\n    \"lastname\": \"Yellow\",\r\n    \"totalprice\": 566,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": \r\n    {\r\n        \"checkin\": \"2024-01-01\",\r\n        \"checkout\": \"2025-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": \r\n    {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkin}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -353,7 +353,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "16ed0b87-0c24-43ad-94de-02ab7d479f34",
+				"id": "1cdc1621-71be-4c1c-9dc5-6d29cfb96722",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -365,7 +365,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b3087cd1-fe40-4722-9536-f0f4279f8b61",
+				"id": "366f847c-23da-4e2a-9fbc-e6b5cc54a238",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -418,8 +418,7 @@
 		},
 		{
 			"key": "additionalneeds",
-			"value": "",
-			"type": "default"
+			"value": ""
 		}
 	]
 }
