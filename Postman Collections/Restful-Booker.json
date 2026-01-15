@@ -323,8 +323,14 @@
 					"script": {
 						"id": "f74f1486-5e79-41e5-9a0b-67894cd78f07",
 						"exec": [
-							"pm.collectionVariables.set(\"totalprice\", Number(pm.collectionVariables.get(\"totalprice\")));\r",
-							"pm.collectionVariables.set(\"depositpaid\", pm.collectionVariables.get(\"depositpaid\") === \"true\");"
+							"pm.collectionVariables.set(\"firstname\", \"Billy\");\r",
+							"pm.collectionVariables.set(\"lastname\", \"Yellow\");\r",
+							"pm.collectionVariables.set(\"totalprice\", 566);\r",
+							"pm.collectionVariables.set(\"depositpaid\", true);\r",
+							"pm.collectionVariables.set(\"checkin\", \"2024-01-01\");\r",
+							"pm.collectionVariables.set(\"checkout\", \"2025-01-01\");\r",
+							"pm.collectionVariables.set(\"additionalneeds\", \"Breakfast\");\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {},
