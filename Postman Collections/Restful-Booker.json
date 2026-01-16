@@ -577,14 +577,88 @@
 					],
 					"query": [
 						{
-							"key": "id",
-							"value": "23",
+							"key": "",
+							"value": "",
 							"disabled": true
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "f3ce20ac-2e0a-43f0-a655-37b90aac41d6",
+					"name": "ExampleResponse",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/booking/{{bookingid}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{bookingid}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "23",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "171"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jan 2026 00:02:21 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"ab-CJKCo5foqPrl+XZp22j8Y+vIKfk\""
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=Mksq8ZsfXsmPVxkBUqocKp9MRd%2Bl4KhuPKFUv%2BLX6ik%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1768521741\"}],\"max_age\":3600}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=\"https://nel.heroku.com/reports?s=Mksq8ZsfXsmPVxkBUqocKp9MRd%2Bl4KhuPKFUv%2BLX6ik%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1768521741\""
+						},
+						{
+							"key": "Server",
+							"value": "Heroku"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 heroku-router"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"firstname\": \"Billy\",\n    \"lastname\": \"Yellow\",\n    \"totalprice\": 566,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2024-01-01\",\n        \"checkout\": \"2025-01-01\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
+				}
+			]
 		}
 	],
 	"event": [
