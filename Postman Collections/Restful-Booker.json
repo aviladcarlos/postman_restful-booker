@@ -662,13 +662,126 @@
 		},
 		{
 			"name": "UpdateBooking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdba78a-1356-4ec4-88b6-cb81b25bcc12",
+						"exec": [
+							"pm.collectionVariables.set(\"firstname\", \"Tommy\");\r",
+							"pm.collectionVariables.set(\"lastname\", \"Blue\");\r",
+							"pm.collectionVariables.set(\"totalprice\", 876);\r",
+							"pm.collectionVariables.set(\"depositpaid\", false);\r",
+							"pm.collectionVariables.set(\"checkin\", \"2024-12-20\");\r",
+							"pm.collectionVariables.set(\"checkout\", \"2025-12-25\");\r",
+							"pm.collectionVariables.set(\"additionalneeds\", \"Brunch\");\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "68d655e2-298f-4431-8486-8a3a4a794b28",
+						"exec": [
+							"const jsonResponse = pm.response.json();\r",
+							"//const schema = \r",
+							"\r",
+							"pm.test(\"Verify status code is 200\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"/*\r",
+							"pm.test(\"Verify response matches schema\", function () \r",
+							"{\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify first name in updated booking matches first name entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify last name in updated booking matches last name entered\", function ()\r",
+							"{\r",
+							"\r",
+							"    pm.expect(jsonResponse.booking.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify total price in updated booking matches total price entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.totalprice).to.eql(pm.collectionVariables.get(\"totalprice\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify deposit paid in updated booking matches deposit paid entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.depositpaid).to.eql(pm.collectionVariables.get(\"depositpaid\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify checkin date in updated booking matches checkin date entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.bookingdates.checkin).to.eql(pm.collectionVariables.get(\"checkin\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify checkout date in updated booking matches checkout date entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.bookingdates.checkout).to.eql(pm.collectionVariables.get(\"checkout\"));\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify additionalneeds in updated booking matches additionalneeds entered\", function ()\r",
+							"{\r",
+							"    pm.expect(jsonResponse.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"additionalneeds\"));\r",
+							"})\r",
+							"*/"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "17510dd0-d78f-43c1-994e-3f7df131caf8",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/{{bookingid}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{bookingid}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": [
 				{
