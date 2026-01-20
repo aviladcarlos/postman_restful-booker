@@ -659,6 +659,18 @@
 					"body": "{\n    \"firstname\": \"Billy\",\n    \"lastname\": \"Yellow\",\n    \"totalprice\": 566,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2024-01-01\",\n        \"checkout\": \"2025-01-01\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
 				}
 			]
+		},
+		{
+			"name": "UpdateBooking",
+			"id": "17510dd0-d78f-43c1-994e-3f7df131caf8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
