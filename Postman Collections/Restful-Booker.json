@@ -510,6 +510,7 @@
 							"{\r",
 							"    pm.test(\"Verify Booking no longer exist\", function () \r",
 							"    {\r",
+							"        console.log(pm.collectionVariables.get(\"bookingdeleted\"))\r",
 							"        pm.response.to.have.status(404);\r",
 							"        //console.log(jsonResponse)\r",
 							"        //pm.expect(jsonResponse).to.eql(\"Not Found\");       \r",
@@ -1238,7 +1239,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "94a1508a-5ef0-4296-908e-5f225e0ea76e",
+				"id": "5542000c-017d-4728-90e9-386158b9a1d4",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1250,7 +1251,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2e9f941c-0291-4cde-8e9e-a65e43006fa8",
+				"id": "ffa554f8-130f-4cc6-a4e1-a34f182cfa45",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
