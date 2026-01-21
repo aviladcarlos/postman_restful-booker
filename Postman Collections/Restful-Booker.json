@@ -1184,12 +1184,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "829cbf9c-41e0-44ed-b665-44b5f8eff2b4",
+						"id": "17fbba4d-a9b1-4b71-8416-1559b4101cc9",
 						"exec": [
 							"pm.test(\"Verify status code is 201\", function () \r",
 							"{\r",
 							"    pm.response.to.have.status(201);\r",
-							"})"
+							"})\r",
+							"\r",
+							"if (pm.response.to.have.status(201)) \r",
+							"{\r",
+							"    pm.collectionVariables.set(\"bookdeleted\", true);\r",
+							"    pm.execution.setNextRequest(\"GetBooking\");\r",
+							"}"
 						],
 						"type": "text/javascript",
 						"packages": {},
