@@ -1219,7 +1219,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "304efac3-2759-4112-a3d3-e7900deef2d0",
+				"id": "2b5fbf36-0bd4-4378-ae99-e8a470accf1d",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1231,7 +1231,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "dfeeafce-1161-4344-8f22-5987437e2232",
+				"id": "795d7bb0-d33e-47bc-a012-63ea4c7bc72e",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1288,6 +1288,10 @@
 		},
 		{
 			"key": "bookingid",
+			"value": ""
+		},
+		{
+			"key": "bookdeleted",
 			"value": ""
 		}
 	]
