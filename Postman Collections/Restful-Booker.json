@@ -456,7 +456,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b2028a68-8617-4f1d-a7e4-0f4f7dc0fffb",
+						"id": "a2824914-edb4-4e4e-aeca-75690efa5f01",
 						"exec": [
 							"const jsonResponse = pm.response.json();\r",
 							"const schema =\r",
@@ -506,11 +506,12 @@
 							"  ]\r",
 							"}\r",
 							"\r",
-							"if(pm.collectionVariables.get(\"bookdeleted\") == true)\r",
+							"if(pm.collectionVariables.get(\"bookingdeleted\") == true)\r",
 							"{\r",
-							"    pm.test(\"Verify status code is 200\", function () \r",
+							"    pm.test(\"Verify Booking no longer exist\", function () \r",
 							"    {\r",
-							"        pm.response.to.have.status(200);\r",
+							"        console.log(jsonResponse)\r",
+							"        pm.expect(jsonResponse).to.eql(\"Not Found\");\r",
 							"    })\r",
 							"}\r",
 							"else\r",
@@ -1235,7 +1236,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2b5fbf36-0bd4-4378-ae99-e8a470accf1d",
+				"id": "94a1508a-5ef0-4296-908e-5f225e0ea76e",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1247,7 +1248,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "795d7bb0-d33e-47bc-a012-63ea4c7bc72e",
+				"id": "2e9f941c-0291-4cde-8e9e-a65e43006fa8",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1307,7 +1308,7 @@
 			"value": ""
 		},
 		{
-			"key": "bookdeleted",
+			"key": "bookingdeleted",
 			"value": ""
 		}
 	]
