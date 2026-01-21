@@ -917,6 +917,18 @@
 					"body": "{\n    \"firstname\": \"Tommy\",\n    \"lastname\": \"Blue\",\n    \"totalprice\": 876,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2024-12-20\",\n        \"checkout\": \"2025-12-25\"\n    },\n    \"additionalneeds\": \"Brunch\"\n}"
 				}
 			]
+		},
+		{
+			"name": "PartialUpdateBooking",
+			"id": "3a7d7137-0ddb-4f3f-acfa-23b2a3d0bc1c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
