@@ -983,7 +983,96 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "43eaf2f9-7b0b-4266-a8e7-ddc2d6550150",
+					"name": "ExampleResponse",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\"\r\n    /*\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"checkin\": \"{{checkin}}\",\r\n    \"checkout\": \"{{checkout}}\"\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n    */\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/booking/{{bookingid}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{bookingid}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Jan 2026 22:54:20 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"a7-GKbBQcyQAhErO2NF51SM73RXDB4\""
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=cgf%2BVMZeFG8PMwVE%2Bef4l0LBAEz%2B2q%2B0WT%2BpTgM2YIg%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1769036060\"}],\"max_age\":3600}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=\"https://nel.heroku.com/reports?s=cgf%2BVMZeFG8PMwVE%2Bef4l0LBAEz%2B2q%2B0WT%2BpTgM2YIg%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1769036060\""
+						},
+						{
+							"key": "Server",
+							"value": "Heroku"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 heroku-router"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"firstname\": \"Timmy\",\n    \"lastname\": \"Grey\",\n    \"totalprice\": 876,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2024-12-20\",\n        \"checkout\": \"2025-12-25\"\n    },\n    \"additionalneeds\": \"Brunch\"\n}"
+				}
+			]
 		}
 	],
 	"event": [
