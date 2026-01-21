@@ -510,8 +510,10 @@
 							"{\r",
 							"    pm.test(\"Verify Booking no longer exist\", function () \r",
 							"    {\r",
-							"        console.log(jsonResponse)\r",
-							"        pm.expect(jsonResponse).to.eql(\"Not Found\");\r",
+							"        pm.response.to.have.status(404);\r",
+							"        //console.log(jsonResponse)\r",
+							"        //pm.expect(jsonResponse).to.eql(\"Not Found\");       \r",
+							"        pm.collectionVariables.set(\"bookingdeleted\", false);\r",
 							"    })\r",
 							"}\r",
 							"else\r",
@@ -1195,7 +1197,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "17fbba4d-a9b1-4b71-8416-1559b4101cc9",
+						"id": "eb03a6bd-0e3b-4f14-99ad-a365e49ebfd1",
 						"exec": [
 							"pm.test(\"Verify status code is 201\", function () \r",
 							"{\r",
@@ -1204,7 +1206,7 @@
 							"\r",
 							"if (pm.response.to.have.status(201)) \r",
 							"{\r",
-							"    pm.collectionVariables.set(\"bookdeleted\", true);\r",
+							"    pm.collectionVariables.set(\"bookingdeleted\", true);\r",
 							"    pm.execution.setNextRequest(\"GetBooking\");\r",
 							"}"
 						],
