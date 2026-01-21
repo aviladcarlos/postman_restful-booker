@@ -1180,13 +1180,37 @@
 		},
 		{
 			"name": "DeleteBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "829cbf9c-41e0-44ed-b665-44b5f8eff2b4",
+						"exec": [
+							"pm.test(\"Verify status code is 201\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "734d3d86-6aff-42fb-89ce-73877301896b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token={{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{url}}/booking/{{bookingid}}"
 			},
 			"response": []
 		}
