@@ -920,13 +920,68 @@
 		},
 		{
 			"name": "PartialUpdateBooking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b7feb501-eba0-48ef-ba0b-a12e221b12f4",
+						"exec": [
+							"pm.collectionVariables.set(\"firstname\", \"Timmy\");\r",
+							"pm.collectionVariables.set(\"lastname\", \"Grey\");\r",
+							"/*\r",
+							"pm.collectionVariables.set(\"totalprice\", 876);\r",
+							"pm.collectionVariables.set(\"depositpaid\", false);\r",
+							"pm.collectionVariables.set(\"checkin\", \"2024-12-20\");\r",
+							"pm.collectionVariables.set(\"checkout\", \"2025-12-25\");\r",
+							"pm.collectionVariables.set(\"additionalneeds\", \"Brunch\");\r",
+							"*/\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "3a7d7137-0ddb-4f3f-acfa-23b2a3d0bc1c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token={{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\"\r\n    /*\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"checkin\": \"{{checkin}}\",\r\n    \"checkout\": \"{{checkout}}\"\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n    */\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/{{bookingid}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{bookingid}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		}
@@ -935,7 +990,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b2062a47-44d9-42e0-8ba5-6b190cb4853d",
+				"id": "304efac3-2759-4112-a3d3-e7900deef2d0",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -947,7 +1002,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "719750b0-a9ae-4ffc-a494-8417c10a90f5",
+				"id": "dfeeafce-1161-4344-8f22-5987437e2232",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -968,7 +1023,7 @@
 		},
 		{
 			"key": "url",
-			"value": "https://restful-booker.herokuapp.com/"
+			"value": "https://restful-booker.herokuapp.com"
 		},
 		{
 			"key": "token",
