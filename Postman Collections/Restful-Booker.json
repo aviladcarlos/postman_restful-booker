@@ -1177,6 +1177,18 @@
 					"body": "{\n    \"firstname\": \"Timmy\",\n    \"lastname\": \"Grey\",\n    \"totalprice\": 876,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2024-12-20\",\n        \"checkout\": \"2025-12-25\"\n    },\n    \"additionalneeds\": \"Brunch\"\n}"
 				}
 			]
+		},
+		{
+			"name": "DeleteBooking",
+			"id": "734d3d86-6aff-42fb-89ce-73877301896b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
