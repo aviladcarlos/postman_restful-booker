@@ -705,7 +705,17 @@
 							"pm.collectionVariables.set(\"checkin\", \"2024-12-20\");\r",
 							"pm.collectionVariables.set(\"checkout\", \"2025-12-25\");\r",
 							"pm.collectionVariables.set(\"additionalneeds\", \"Brunch\");\r",
-							""
+							"\r",
+							"\r",
+							"/*\r",
+							"pm.collectionVariables.set(\"firstname\", pm.iterationData.get(\"update_firstname\"));\r",
+							"pm.collectionVariables.set(\"lastname\", pm.iterationData.get(\"update_lastname\"));\r",
+							"pm.collectionVariables.set(\"totalprice\", pm.iterationData.get(\"update_totalprice\"));\r",
+							"pm.collectionVariables.set(\"depositpaid\", pm.iterationData.get(\"update_depositpaid\"));\r",
+							"pm.collectionVariables.set(\"checkin\", pm.iterationData.get(\"update_checkin\"));\r",
+							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"update_checkout\"));\r",
+							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"update_additionalneeds\"));\r",
+							"*/"
 						],
 						"type": "text/javascript",
 						"packages": {},
