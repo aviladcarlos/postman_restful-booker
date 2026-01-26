@@ -720,6 +720,7 @@
 							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"update_checkout\"));\r",
 							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"update_additionalneeds\"));\r",
 							"\r",
+							"/*\r",
 							"console.log(typeof(pm.iterationData.get(\"update_firstname\")))\r",
 							"console.log(pm.iterationData.get(\"update_firstname\"))\r",
 							"console.log(typeof(pm.iterationData.get(\"update_lastname\")))\r",
@@ -727,7 +728,8 @@
 							"console.log(typeof(pm.iterationData.get(\"update_totalprice\")))\r",
 							"console.log(pm.iterationData.get(\"update_totalprice\"))\r",
 							"console.log(typeof(pm.iterationData.get(\"update_additionalneeds\")))\r",
-							"console.log(pm.iterationData.get(\"update_additionalneeds\"))"
+							"console.log(pm.iterationData.get(\"update_additionalneeds\"))\r",
+							"*/"
 						],
 						"type": "text/javascript",
 						"packages": {},
