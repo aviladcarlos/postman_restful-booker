@@ -373,7 +373,9 @@
 							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"checkout\"));\r",
 							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"additionalneeds\"));\r",
 							"\r",
+							"console.log(typeof(pm.iterationData.get(\"totalprice\")))\r",
 							"console.log(pm.iterationData.get(\"totalprice\"))\r",
+							"console.log(typeof(pm.iterationData.get(\"depositpaid\")))\r",
 							"console.log(pm.iterationData.get(\"depositpaid\"))\r",
 							"console.log(pm.iterationData.get(\"checkin\"))\r",
 							"console.log(pm.iterationData.get(\"checkout\"))"
