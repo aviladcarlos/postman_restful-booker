@@ -458,7 +458,7 @@
 					"script": {
 						"id": "a2824914-edb4-4e4e-aeca-75690efa5f01",
 						"exec": [
-							"const jsonResponse = pm.response.json();\r",
+							"//const jsonResponse = pm.response.json();\r",
 							"const schema =\r",
 							"{\r",
 							"  \"type\": \"object\",\r",
@@ -506,7 +506,7 @@
 							"  ]\r",
 							"}\r",
 							"\r",
-							"console.log(jsonResponse);\r",
+							"console.log(pm.response.text());\r",
 							"\r",
 							"if(pm.collectionVariables.get(\"bookingdeleted\") == true)\r",
 							"{\r",
