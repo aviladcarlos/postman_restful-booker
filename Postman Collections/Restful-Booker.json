@@ -319,27 +319,27 @@
 							"",
 							"pm.test(\"Verify total price in booking confirmation matches total price entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.totalprice).to.eql(pm.collectionVariables.get(\"totalprice\"));",
+							"    pm.expect(jsonResponse.booking.totalprice).to.eql(pm.collectionVariables.get(\"collection_totalprice\"));",
 							"});",
 							"",
 							"pm.test(\"Verify deposit paid in booking confirmation matches deposit paid entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.depositpaid).to.eql(pm.collectionVariables.get(\"depositpaid\"));",
+							"    pm.expect(jsonResponse.booking.depositpaid).to.eql(pm.collectionVariables.get(\"collection_depositpaid\"));",
 							"});",
 							"",
 							"pm.test(\"Verify checkin date in booking confirmation matches checkin date entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.bookingdates.checkin).to.eql(pm.collectionVariables.get(\"checkin\"));",
+							"    pm.expect(jsonResponse.booking.bookingdates.checkin).to.eql(pm.collectionVariables.get(\"collection_checkin\"));",
 							"});",
 							"",
 							"pm.test(\"Verify checkout date in booking confirmation matches checkout date entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.bookingdates.checkout).to.eql(pm.collectionVariables.get(\"checkout\"));",
+							"    pm.expect(jsonResponse.booking.bookingdates.checkout).to.eql(pm.collectionVariables.get(\"collection_checkout\"));",
 							"});",
 							"",
 							"pm.test(\"Verify additionalneeds in booking confirmation matches additionalneeds entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"additionalneeds\"));",
+							"    pm.expect(jsonResponse.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"collection_additionalneeds\"));",
 							"});",
 							"",
 							"pm.collectionVariables.set(\"bookingid\", jsonResponse.bookingid);",
@@ -357,22 +357,22 @@
 						"exec": [
 							"/*\r",
 							"// If want to run without csv file\r",
-							"pm.collectionVariables.set(\"firstname\", \"Billy\");\r",
-							"pm.collectionVariables.set(\"lastname\", \"Yellow\");\r",
-							"pm.collectionVariables.set(\"totalprice\", 566);\r",
-							"pm.collectionVariables.set(\"depositpaid\", true);\r",
-							"pm.collectionVariables.set(\"checkin\", \"2024-01-01\");\r",
-							"pm.collectionVariables.set(\"checkout\", \"2025-01-01\");\r",
-							"pm.collectionVariables.set(\"additionalneeds\", \"Breakfast\");\r",
+							"pm.collectionVariables.set(\"collection_firstname\", \"Billy\");\r",
+							"pm.collectionVariables.set(\"collection_lastname\", \"Yellow\");\r",
+							"pm.collectionVariables.set(\"collection_totalprice\", 566);\r",
+							"pm.collectionVariables.set(\"collection_depositpaid\", true);\r",
+							"pm.collectionVariables.set(\"collection_checkin\", \"2024-01-01\");\r",
+							"pm.collectionVariables.set(\"collection_checkout\", \"2025-01-01\");\r",
+							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Breakfast\");\r",
 							"*/\r",
 							"\r",
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"lastname\"));\r",
-							"pm.collectionVariables.set(\"totalprice\", pm.iterationData.get(\"totalprice\"));\r",
-							"pm.collectionVariables.set(\"depositpaid\", pm.iterationData.get(\"depositpaid\"));\r",
-							"pm.collectionVariables.set(\"checkin\", pm.iterationData.get(\"checkin\"));\r",
-							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"checkout\"));\r",
-							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"additionalneeds\"));\r",
+							"pm.collectionVariables.set(\"collection_totalprice\", pm.iterationData.get(\"totalprice\"));\r",
+							"pm.collectionVariables.set(\"collection_depositpaid\", pm.iterationData.get(\"depositpaid\"));\r",
+							"pm.collectionVariables.set(\"collection_checkin\", pm.iterationData.get(\"checkin\"));\r",
+							"pm.collectionVariables.set(\"collection_checkout\", pm.iterationData.get(\"checkout\"));\r",
+							"pm.collectionVariables.set(\"collection_additionalneeds\", pm.iterationData.get(\"additionalneeds\"));\r",
 							""
 						],
 						"type": "text/javascript",
@@ -1350,7 +1350,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b76ee673-8c7e-4922-bd62-24012b1b914c",
+				"id": "e8b1f555-c502-4296-867e-a5e3cdd93b5b",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1362,7 +1362,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9710b680-e113-4dd8-8dd4-4a3d4b72c98a",
+				"id": "08fb9952-5beb-40f3-8556-ea12907a2bdb",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1390,31 +1390,31 @@
 			"value": ""
 		},
 		{
-			"key": "firstname",
+			"key": "collection_firstname",
 			"value": ""
 		},
 		{
-			"key": "lastname",
+			"key": "collection_lastname",
 			"value": ""
 		},
 		{
-			"key": "totalprice",
+			"key": "collection_totalprice",
 			"value": ""
 		},
 		{
-			"key": "depositpaid",
+			"key": "collection_depositpaid",
 			"value": ""
 		},
 		{
-			"key": "checkin",
+			"key": "collection_checkin",
 			"value": ""
 		},
 		{
-			"key": "checkout",
+			"key": "collectin_checkout",
 			"value": ""
 		},
 		{
-			"key": "additionalneeds",
+			"key": "collection_additionalneeds",
 			"value": ""
 		},
 		{
@@ -1423,14 +1423,6 @@
 		},
 		{
 			"key": "bookingdeleted",
-			"value": ""
-		},
-		{
-			"key": "collection_firstname",
-			"value": ""
-		},
-		{
-			"key": "collection_lastname",
 			"value": ""
 		}
 	]
