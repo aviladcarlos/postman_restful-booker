@@ -308,13 +308,13 @@
 							"",
 							"pm.test(\"Verify first name in booking confirmation matches first name entered\", function ()",
 							"{",
-							"    pm.expect(jsonResponse.booking.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));",
+							"    pm.expect(jsonResponse.booking.firstname).to.eql(pm.collectionVariables.get(\"collection_firstname\"));",
 							"});",
 							"",
 							"pm.test(\"Verify last name in booking confirmation matches last name entered\", function ()",
 							"{",
 							"",
-							"    pm.expect(jsonResponse.booking.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));",
+							"    pm.expect(jsonResponse.booking.lastname).to.eql(pm.collectionVariables.get(\"collection_lastname\"));",
 							"});",
 							"",
 							"pm.test(\"Verify total price in booking confirmation matches total price entered\", function ()",
@@ -366,8 +366,8 @@
 							"pm.collectionVariables.set(\"additionalneeds\", \"Breakfast\");\r",
 							"*/\r",
 							"\r",
-							"pm.collectionVariables.set(\"firstname\", pm.iterationData.get(\"firstname\"));\r",
-							"pm.collectionVariables.set(\"lastname\", pm.iterationData.get(\"lastname\"));\r",
+							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"firstname\"));\r",
+							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"lastname\"));\r",
 							"pm.collectionVariables.set(\"totalprice\", pm.iterationData.get(\"totalprice\"));\r",
 							"pm.collectionVariables.set(\"depositpaid\", pm.iterationData.get(\"depositpaid\"));\r",
 							"pm.collectionVariables.set(\"checkin\", pm.iterationData.get(\"checkin\"));\r",
@@ -549,13 +549,13 @@
 							"\r",
 							"    pm.test(\"Verify first name in booking confirmation matches first name entered\", function ()\r",
 							"    {\r",
-							"        pm.expect(jsonResponse.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));\r",
+							"        pm.expect(jsonResponse.firstname).to.eql(pm.collectionVariables.get(\"collection_firstname\"));\r",
 							"    });\r",
 							"\r",
 							"    pm.test(\"Verify last name in booking confirmation matches last name entered\", function ()\r",
 							"    {\r",
 							"\r",
-							"        pm.expect(jsonResponse.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));\r",
+							"        pm.expect(jsonResponse.lastname).to.eql(pm.collectionVariables.get(\"collection_lastname\"));\r",
 							"    });\r",
 							"\r",
 							"    pm.test(\"Verify total price in booking confirmation matches total price entered\", function ()\r",
@@ -587,6 +587,13 @@
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -698,10 +705,11 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "7fdba78a-1356-4ec4-88b6-cb81b25bcc12",
+						"id": "b66e51f1-47c3-4a85-9910-c281f0c574ea",
 						"exec": [
 							"\r",
-							"/*// If want to run without csv file\r",
+							"/*\r",
+							"// If want to run without csv file\r",
 							"pm.collectionVariables.set(\"firstname\", \"Tommy\");\r",
 							"pm.collectionVariables.set(\"lastname\", \"Blue\");\r",
 							"pm.collectionVariables.set(\"totalprice\", 876);\r",
@@ -710,18 +718,14 @@
 							"pm.collectionVariables.set(\"checkout\", \"2025-12-25\");\r",
 							"pm.collectionVariables.set(\"additionalneeds\", \"Brunch\");\r",
 							"*/\r",
-							"console.log(pm.collectionVariables.get(\"firstname\"))\r",
-							"/*\r",
-							"pm.collectionVariables.set(\"firstname\", pm.iterationData.get(\"update_firstname\"));\r",
-							"console.log(pm.collectionVariables.get(\"firstname\"))\r",
-							"pm.collectionVariables.set(\"lastname\", pm.iterationData.get(\"update_lastname\"));\r",
-							"console.log(pm.collectionVariables.get(\"lastname\"))\r",
+							"\r",
+							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"update_firstname\"));\r",
+							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"update_lastname\"));\r",
 							"pm.collectionVariables.set(\"totalprice\", pm.iterationData.get(\"update_totalprice\"));\r",
 							"pm.collectionVariables.set(\"depositpaid\", pm.iterationData.get(\"update_depositpaid\"));\r",
 							"pm.collectionVariables.set(\"checkin\", pm.iterationData.get(\"update_checkin\"));\r",
 							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"update_checkout\"));\r",
 							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"update_additionalneeds\"));\r",
-							"*/\r",
 							"\r",
 							"/*\r",
 							"console.log(typeof(pm.iterationData.get(\"update_firstname\")))\r",
@@ -742,7 +746,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "68d655e2-298f-4431-8486-8a3a4a794b28",
+						"id": "edf95ce8-edb1-48f1-a809-02a53b517ba6",
 						"exec": [
 							"const jsonResponse = pm.response.json();\r",
 							"const schema = \r",
@@ -804,13 +808,13 @@
 							"\r",
 							"pm.test(\"Verify first name in updated booking matches first name entered\", function ()\r",
 							"{\r",
-							"    pm.expect(jsonResponse.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));\r",
+							"    pm.expect(jsonResponse.firstname).to.eql(pm.collectionVariables.get(\"collection_firstname\"));\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Verify last name in updated booking matches last name entered\", function ()\r",
 							"{\r",
 							"\r",
-							"    pm.expect(jsonResponse.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));\r",
+							"    pm.expect(jsonResponse.lastname).to.eql(pm.collectionVariables.get(\"collection_lastname\"));\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Verify total price in updated booking matches total price entered\", function ()\r",
@@ -859,7 +863,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"{{collection_firstname}}\",\r\n    \"lastname\": \"{{collection_lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
