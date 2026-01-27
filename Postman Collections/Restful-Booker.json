@@ -863,7 +863,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"{{collection_firstname}}\",\r\n    \"lastname\": \"{{collection_lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"{{collection_firstname}}\",\r\n    \"lastname\": \"{{collection_lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{updated_checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -987,8 +987,8 @@
 					"script": {
 						"id": "b7feb501-eba0-48ef-ba0b-a12e221b12f4",
 						"exec": [
-							"pm.collectionVariables.set(\"firstname\", \"Timmy\");\r",
-							"pm.collectionVariables.set(\"lastname\", \"Grey\");\r",
+							"pm.collectionVariables.set(\"collection_firstname\", \"Timmy\");\r",
+							"pm.collectionVariables.set(\"collection_lastname\", \"Grey\");\r",
 							"/*\r",
 							"pm.collectionVariables.set(\"totalprice\", 876);\r",
 							"pm.collectionVariables.set(\"depositpaid\", false);\r",
@@ -1423,6 +1423,14 @@
 		},
 		{
 			"key": "bookingdeleted",
+			"value": ""
+		},
+		{
+			"key": "collection_firstname",
+			"value": ""
+		},
+		{
+			"key": "collection_lastname",
 			"value": ""
 		}
 	]
