@@ -582,15 +582,7 @@
 							"    {\r",
 							"        pm.expect(jsonResponse.additionalneeds).to.eql(pm.collectionVariables.get(\"additionalneeds\"));\r",
 							"    });\r",
-							"}\r",
-							"\r",
-							"pm.collectionVariables.set(\"firstname\", pm.iterationData.get(\"update_firstname\"));\r",
-							"pm.collectionVariables.set(\"lastname\", pm.iterationData.get(\"update_lastname\"));\r",
-							"pm.collectionVariables.set(\"totalprice\", pm.iterationData.get(\"update_totalprice\"));\r",
-							"pm.collectionVariables.set(\"depositpaid\", pm.iterationData.get(\"update_depositpaid\"));\r",
-							"pm.collectionVariables.set(\"checkin\", pm.iterationData.get(\"update_checkin\"));\r",
-							"pm.collectionVariables.set(\"checkout\", pm.iterationData.get(\"update_checkout\"));\r",
-							"pm.collectionVariables.set(\"additionalneeds\", pm.iterationData.get(\"update_additionalneeds\"));"
+							"}"
 						],
 						"type": "text/javascript",
 						"packages": {},
