@@ -1037,7 +1037,7 @@
 							"    bodyContent.push('\"additionalneeds\": \"{{collection_additionalneeds}}\"')\r",
 							"}\r",
 							"\r",
-							"requestBody = \"{\\n\\t\" +bodyContent.join(\",\\n\\t\") + \"\\n}\";\r",
+							"requestBody = JSON.parse(\"{\\n\\t\" +bodyContent.join(\",\\n\\t\") + \"\\n}\");\r",
 							"pm.variables.set(\"requestBody\", JSON.stringify(requestBody));\r",
 							"console.log(requestBody)\r",
 							"\r",
