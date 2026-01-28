@@ -1000,11 +1000,11 @@
 							"pm.collectionVariables.set(\"collection_additionalneeds\", pm.iterationData.get(\"partialupdate_additionalneeds\"));\r",
 							"*/\r",
 							"\r",
-							"console.log(pm.iterationData.get(\"partialupdate_totalprice\"));\r",
-							"console.log(pm.iterationData.get(\"partialupdate_depositpaid\"));\r",
-							"console.log(pm.iterationData.get(\"partialupdate_checkin\"));\r",
-							"console.log(pm.iterationData.get(\"partialupdate_checkout\"));\r",
-							"console.log(pm.iterationData.get(\"partialupdate_additionalneeds\"));"
+							"console.log(typeof(pm.iterationData.get(\"partialupdate_totalprice\")));\r",
+							"console.log(typeof(pm.iterationData.get(\"partialupdate_depositpaid\")));\r",
+							"console.log(typeof(pm.iterationData.get(\"partialupdate_checkin\")));\r",
+							"console.log(typeof(pm.iterationData.get(\"partialupdate_checkout\")));\r",
+							"console.log(typeof(pm.iterationData.get(\"partialupdate_additionalneeds\")));"
 						],
 						"type": "text/javascript",
 						"packages": {},
