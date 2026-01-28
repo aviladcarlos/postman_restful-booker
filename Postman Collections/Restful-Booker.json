@@ -1038,6 +1038,7 @@
 							"}\r",
 							"\r",
 							"requestBody = JSON.stringify(\"{\\n\\t\" +bodyContent.join(\",\\n\\t\") + \"\\n}\");\r",
+							"pm.variables.set(\"requestBody\", requestBody);\r",
 							"console.log(requestBody)\r",
 							"\r",
 							"\r",
