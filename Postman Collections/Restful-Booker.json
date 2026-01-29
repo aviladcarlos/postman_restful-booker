@@ -1028,6 +1028,8 @@
 							"\r",
 							"if (pm.iterationData.get(\"partialupdate_depositpaid\") !== \"\")\r",
 							"{\r",
+							"    console.log(m.iterationData.get(\"partialupdate_depositpaid\"))\r",
+							"    console.log(pm.iterationData.get(\"partialupdate_depositpaid\") === \"true\"))\r",
 							"    pm.collectionVariables.set(\"collection_depositpaid\", (pm.iterationData.get(\"partialupdate_depositpaid\") === \"true\"));\r",
 							"    requestBody.depositpaid = \"{{collection_depositpaid}}\"\r",
 							"}\r",
