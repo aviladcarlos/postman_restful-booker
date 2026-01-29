@@ -719,7 +719,6 @@
 					"script": {
 						"id": "b66e51f1-47c3-4a85-9910-c281f0c574ea",
 						"exec": [
-							"\r",
 							"/*\r",
 							"// If want to run without csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", \"Tommy\");\r",
@@ -730,6 +729,8 @@
 							"pm.collectionVariables.set(\"collection_checkout\", \"2025-12-25\");\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Brunch\");\r",
 							"*/\r",
+							"\r",
+							"//Updating collection variables with values retreived from csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"update_firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"update_lastname\"));\r",
 							"pm.collectionVariables.set(\"collection_totalprice\", pm.iterationData.get(\"update_totalprice\"));\r",
@@ -1400,6 +1401,7 @@
 							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"\r",
+							"// Set collection variable if status is 201 and request GetBooking to be ran\r",
 							"if (pm.response.to.have.status(201)) \r",
 							"{\r",
 							"    pm.collectionVariables.set(\"bookingdeleted\", true);\r",
@@ -1409,6 +1411,13 @@
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
 					}
 				}
 			],
