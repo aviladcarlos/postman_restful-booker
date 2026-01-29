@@ -126,6 +126,7 @@
 							"    pm.expect(jsonResponse.token).to.not.be.empty;\r",
 							"});\r",
 							"\r",
+							"//Updating the collection variable \"token\" with the token value retreived from reponse\r",
 							"pm.collectionVariables.set(\"token\", jsonResponse.token);"
 						],
 						"type": "text/javascript",
@@ -136,8 +137,13 @@
 				{
 					"listen": "prerequest",
 					"script": {
+						"id": "012dc6c2-ac7d-4ea5-a4f9-46879a7acf18",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
 						"packages": {},
-						"type": "text/javascript"
+						"requests": {}
 					}
 				}
 			],
