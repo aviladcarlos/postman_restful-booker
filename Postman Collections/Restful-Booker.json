@@ -348,6 +348,7 @@
 							"    pm.expect(jsonResponse.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"collection_additionalneeds\"));",
 							"});",
 							"",
+							"//Updating the collection variable \"bookingid\" with the bookingid value retreived from reponse",
 							"pm.collectionVariables.set(\"bookingid\", jsonResponse.bookingid);",
 							""
 						],
@@ -371,6 +372,7 @@
 							"pm.collectionVariables.set(\"collection_checkout\", \"2025-01-01\");\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Breakfast\");\r",
 							"*/\r",
+							"//Updating collection variables with values retreived from csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"lastname\"));\r",
 							"pm.collectionVariables.set(\"collection_totalprice\", pm.iterationData.get(\"totalprice\"));\r",
