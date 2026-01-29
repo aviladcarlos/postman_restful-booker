@@ -726,7 +726,7 @@
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"update_firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"update_lastname\"));\r",
 							"pm.collectionVariables.set(\"collection_totalprice\", pm.iterationData.get(\"update_totalprice\"));\r",
-							"pm.collectionVariables.set(\"collection_depositpaid\", pm.iterationData.get(\"update_depositpaid\"));\r",
+							"pm.collectionVariables.set(\"collection_depositpaid\", (pm.iterationData.get(\"update_depositpaid\") === \"true\"));\r",
 							"pm.collectionVariables.set(\"collection_checkin\", pm.iterationData.get(\"update_checkin\"));\r",
 							"pm.collectionVariables.set(\"collection_checkout\", pm.iterationData.get(\"update_checkout\"));\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", pm.iterationData.get(\"update_additionalneeds\"));"
@@ -1028,7 +1028,7 @@
 							"\r",
 							"if (pm.iterationData.get(\"partialupdate_depositpaid\") !== \"\")\r",
 							"{\r",
-							"    pm.collectionVariables.set(\"collection_depositpaid\", pm.iterationData.get(\"partialupdate_depositpaid\"));\r",
+							"    pm.collectionVariables.set(\"collection_depositpaid\", (pm.iterationData.get(\"partialupdate_depositpaid\") === \"true\"));\r",
 							"    requestBody.depositpaid = \"{{collection_depositpaid}}\"\r",
 							"}\r",
 							"\r",
