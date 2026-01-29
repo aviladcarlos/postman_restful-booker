@@ -530,6 +530,7 @@
 							"  ]\r",
 							"}\r",
 							"\r",
+							"// Request is re-triggered by DeleteBooking to verify booking has been deleteted. If so, verify it no longer exists and end the test. If not, verify booking details.\r",
 							"if(pm.collectionVariables.get(\"bookingdeleted\") == true)\r",
 							"{\r",
 							"    pm.test(\"Verify booking no longer exist\", function () \r",
