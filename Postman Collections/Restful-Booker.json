@@ -362,7 +362,7 @@
 					"script": {
 						"id": "f74f1486-5e79-41e5-9a0b-67894cd78f07",
 						"exec": [
-							"/*\r",
+							"\r",
 							"// If want to run without csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", \"Billy\");\r",
 							"pm.collectionVariables.set(\"collection_lastname\", \"Yellow\");\r",
@@ -371,7 +371,8 @@
 							"pm.collectionVariables.set(\"collection_checkin\", \"2024-01-01\");\r",
 							"pm.collectionVariables.set(\"collection_checkout\", \"2025-01-01\");\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Breakfast\");\r",
-							"*/\r",
+							"\r",
+							"/*\r",
 							"//Updating collection variables with values retreived from csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"lastname\"));\r",
@@ -723,7 +724,7 @@
 					"script": {
 						"id": "b66e51f1-47c3-4a85-9910-c281f0c574ea",
 						"exec": [
-							"/*\r",
+							"\r",
 							"// If want to run without csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", \"Tommy\");\r",
 							"pm.collectionVariables.set(\"collection_lastname\", \"Blue\");\r",
@@ -732,8 +733,9 @@
 							"pm.collectionVariables.set(\"collection_checkin\", \"2024-12-20\");\r",
 							"pm.collectionVariables.set(\"collection_checkout\", \"2025-12-25\");\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Brunch\");\r",
-							"*/\r",
 							"\r",
+							"\r",
+							"/*\r",
 							"//Updating collection variables with values retreived from csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", pm.iterationData.get(\"update_firstname\"));\r",
 							"pm.collectionVariables.set(\"collection_lastname\", pm.iterationData.get(\"update_lastname\"));\r",
@@ -997,7 +999,6 @@
 						"id": "b7feb501-eba0-48ef-ba0b-a12e221b12f4",
 						"exec": [
 							"\r",
-							"/*\r",
 							"// If want to run without csv file\r",
 							"pm.collectionVariables.set(\"collection_firstname\", \"Timmy\");\r",
 							"pm.collectionVariables.set(\"collection_lastname\", \"Grey\");\r",
@@ -1019,8 +1020,8 @@
 							"};\r",
 							"\r",
 							"pm.variables.set(\"requestBody\", JSON.stringify(requestBody));\r",
-							"*/\r",
 							"\r",
+							"/*\r",
 							"// Placeholder, collects the partials updates that need to be sent in the request body.\r",
 							"let requestBody = {};\r",
 							"\r",
