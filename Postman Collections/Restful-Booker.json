@@ -1009,7 +1009,7 @@
 							"pm.collectionVariables.set(\"collection_checkout\", \"2025-12-25\");\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", \"Brunch\");\r",
 							"\r",
-							"requestBody =\r",
+							"let requestBody =\r",
 							"{\r",
 							"    \"firstname\" : \"{{collection_firstname}}\",\r",
 							"    \"lastname\" : \"{{collection_lastname}}\",\r",
@@ -1090,7 +1090,8 @@
 							"}\r",
 							"\r",
 							"// Converts requestBody object to a JSON string and sets it to the Postman local variable \"requestBody\".\r",
-							"pm.variables.set(\"requestBody\", JSON.stringify(requestBody));"
+							"pm.variables.set(\"requestBody\", JSON.stringify(requestBody));\r",
+							"*/"
 						],
 						"type": "text/javascript",
 						"packages": {},
