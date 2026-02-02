@@ -1,0 +1,5 @@
+﻿firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds,update_firstname,update_lastname,update_totalprice,update_depositpaid,update_checkin,update_checkout,update_additionalneeds,partialupdate_firstname,partialupdate_lastname,partialupdate_totalprice,partialupdate_depositpaid,partialupdate_checkin,partialupdate_checkout,partialupdate_additionalneeds
+Billy,Yellow,566,true,2024-01-01,2025-01-01,Breakfast,Tommy,Blue,876,true,2024-12-20,2025-12-25,Brunch,Timmy,Grey,,,,,
+Latoya,Graves,951,false,2024-10-09,2024-10-12,Dinner,Lessie,King,201,false,2024-03-09,2024-03-13,Brunch,,,945,true,,,
+Edgardo,Cunningham,817,true,2024-08-02,2024-08-06,Brunch,Dawn,Fowler,372,false,2024-05-03,2024-05-07,Breakast,,,,,2024-06-04,2024-06-07,
+Adriana,Gay,579,false,2024-02-03,2024-02-05,None,Ramiro,Cohen,264,true,2024-06-03,2024-06-07,Dinner,,,,,,,Breakfast
