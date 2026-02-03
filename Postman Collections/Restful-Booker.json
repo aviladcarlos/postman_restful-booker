@@ -385,6 +385,9 @@
 							"pm.collectionVariables.set(\"collection_checkin\", pm.iterationData.get(\"checkin\"));\r",
 							"pm.collectionVariables.set(\"collection_checkout\", pm.iterationData.get(\"checkout\"));\r",
 							"pm.collectionVariables.set(\"collection_additionalneeds\", pm.iterationData.get(\"additionalneeds\"));\r",
+							"\r",
+							"console.log(pm.collectionVariables.get(\"collection_firstname\"));\r",
+							"console.log(pm.collectionVariables.get(\"collection_lastname\"));\r",
 							""
 						],
 						"type": "text/javascript",
