@@ -1,5 +1,5 @@
 ## Overview
-This QA project tests, the API provided by the website Restful-Booker (https://restful-booker.herokuapp.com/). The project can be imported and ran in Postman or through command line using Newman. Currently runs 4 tests using the data stored in `bookingData.csv` file located `Postman Collections` folder.
+This QA project tests, the API provided by the website Restful-Booker (https://restful-booker.herokuapp.com/). The project can be imported and ran in Postman or through command line using Newman. Currently runs 4 tests using the data stored in `bookingData.csv` file located in the `Postman Collections` folder.
 
 ## Created With
 | Name | Version |
