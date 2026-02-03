@@ -9,7 +9,7 @@ This QA project tests, the API provided by the website Restful-Booker (https://r
 | [Newman](https://learning.postman.com/docs/collections/using-newman-cli/installing-running-newman) | 6.2.1 |
 ## Running with Newman
 > [!Note]
-> All commands are ran within the `postman_restful-booker` folder/directory.
+> All commands are ran within the `postman_restful-booker/Postman Collections` folder/directory.
 
 To run api tests using the testing data provided in bookingData.csv file. By default, the test will run for each row of data that exist:
 ```
